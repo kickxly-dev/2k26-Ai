@@ -1,0 +1,4 @@
+xbox-smartglass-core>=1.0.0
+xbox-webapi>=2.0.0
+click>=8.0.0
+aiohttp>=3.8.0

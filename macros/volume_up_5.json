@@ -1,0 +1,7 @@
+{
+  "name": "Volume Up x5",
+  "description": "Raise the volume five steps",
+  "steps": [
+    { "action": "volume", "direction": "up", "times": 5 }
+  ]
+}

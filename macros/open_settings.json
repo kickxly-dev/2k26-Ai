@@ -1,0 +1,11 @@
+{
+  "name": "Open Settings",
+  "description": "Navigate from the home screen to Settings",
+  "steps": [
+    { "action": "button",   "button": "nexus" },
+    { "action": "wait",     "seconds": 1.5 },
+    { "action": "navigate", "direction": "right", "steps": 2 },
+    { "action": "button",   "button": "A" },
+    { "action": "wait",     "seconds": 1.0 }
+  ]
+}

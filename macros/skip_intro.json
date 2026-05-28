@@ -1,0 +1,13 @@
+{
+  "name": "Skip Intro / Cutscene",
+  "description": "Mash A then B to skip typical game intros and cutscenes",
+  "steps": [
+    { "action": "button", "button": "A" },
+    { "action": "wait",   "seconds": 0.5 },
+    { "action": "button", "button": "B" },
+    { "action": "wait",   "seconds": 0.5 },
+    { "action": "button", "button": "A" },
+    { "action": "wait",   "seconds": 0.5 },
+    { "action": "button", "button": "Menu" }
+  ]
+}
