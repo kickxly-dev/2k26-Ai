@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zefoy — Free TikTok Tools</title>
+  <meta name="description" content="Free TikTok views, likes, followers, comments, shares and more. Boost your TikTok presence for free." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<body>
+
+  <!-- Alert Banner -->
+  <div class="alert-banner">
+    <i class="fas fa-shield-halved"></i>
+    All services are 100% free &mdash; no login required &mdash; no password needed
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="logo">
+      <div class="logo-icon">🎵</div>
+      <span class="logo-text">Zefoy</span>
+    </a>
+    <div class="nav-links">
+      <a href="#" class="nav-link active">Home</a>
+      <a href="#how" class="nav-link">How It Works</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#" class="nav-link">Contact <span class="nav-badge">New</span></a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">
+      <i class="fas fa-bolt"></i> 100% Free TikTok Booster
+    </div>
+    <h1>Grow Your TikTok<br><span>For Free</span></h1>
+    <p>Boost your views, likes, followers and more with our free TikTok tools. No login required, no strings attached.</p>
+
+    <!-- Stats -->
+    <div id="stats-section" class="stats-row">
+      <div class="stat-card">
+        <div class="stat-value" id="stat-users">0</div>
+        <div class="stat-label">Total Users</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-sent">0</div>
+        <div class="stat-label">Services Sent</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-services">0</div>
+        <div class="stat-label">Services</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-uptime">0</div>
+        <div class="stat-label">Uptime</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="section-header">
+      <span class="section-title">🚀 Available Services</span>
+      <div class="section-line"></div>
+    </div>
+    <div id="services-grid" class="services-grid">
+      <!-- Populated by JS -->
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how" class="how-section">
+    <h2 class="how-title">How It Works</h2>
+    <p class="how-subtitle">Get free TikTok engagement in 3 simple steps</p>
+    <div class="steps-row">
+      <div class="step-item">
+        <div class="step-num s1">1</div>
+        <div class="step-label">Choose a Service</div>
+        <div class="step-detail">Pick from views, likes, followers, comments, shares and more.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num s2">2</div>
+        <div class="step-label">Enter Your URL</div>
+        <div class="step-detail">Paste your TikTok video or profile URL into the input field.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num s3">3</div>
+        <div class="step-label">Get Results</div>
+        <div class="step-detail">Complete a quick verification and watch the engagement arrive.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with <span>♥</span> by Zefoy &mdash; Free TikTok Tools</p>
+    <div class="footer-links">
+      <a href="#" class="footer-link">Privacy Policy</a>
+      <a href="#" class="footer-link">Terms of Service</a>
+      <a href="#" class="footer-link">Contact</a>
+      <a href="#" class="footer-link">FAQ</a>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════
+       SERVICE PANEL
+  ═════════════════════════════════════════ -->
+  <div id="panel-overlay" class="panel-overlay"></div>
+
+  <div id="service-panel" class="service-panel">
+    <div class="panel-handle"></div>
+
+    <div class="panel-header">
+      <div id="panel-icon" class="panel-icon"></div>
+      <div>
+        <div id="panel-title" class="panel-title"></div>
+        <div id="panel-subtitle" class="panel-subtitle"></div>
+      </div>
+      <button id="panel-close" class="panel-close" aria-label="Close">
+        <i class="fas fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Step: URL Input -->
+    <div id="step-url" class="step active">
+      <div class="input-group">
+        <label class="input-label" for="url-input">
+          <i class="fas fa-link" style="margin-right:5px;color:var(--pink)"></i>
+          TikTok URL
+        </label>
+        <div class="url-input-wrap">
+          <input
+            id="url-input"
+            type="url"
+            class="url-input"
+            placeholder="https://www.tiktok.com/@username/video/..."
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <span class="url-input-icon">
+            <i class="fas fa-magnifying-glass"></i>
+          </span>
+        </div>
+        <div id="input-error" class="input-error"></div>
+      </div>
+
+      <div id="profile-preview" class="profile-preview">
+        <div class="profile-avatar" id="preview-avatar">
+          <span id="preview-avatar-letter">U</span>
+        </div>
+        <div>
+          <div class="profile-name" id="preview-name">@user</div>
+          <div class="profile-url" id="preview-url"></div>
+        </div>
+        <span class="verified-icon"><i class="fas fa-circle-check"></i></span>
+      </div>
+
+      <button id="btn-send" class="btn-send" type="button">
+        <span class="btn-text">Send &rarr;</span>
+        <span class="btn-spinner"><span class="spinner"></span></span>
+      </button>
+
+      <p style="font-size:.75rem;color:#555;margin-top:12px;text-align:center">
+        <i class="fas fa-lock" style="margin-right:4px"></i>
+        We never store your URL or personal data
+      </p>
+    </div>
+
+    <!-- Step: Verification -->
+    <div id="step-verify" class="step">
+      <div class="verify-container">
+        <div class="verify-icon">🛡️</div>
+        <div class="verify-title">Human Verification</div>
+        <div class="verify-desc">
+          Please wait while we verify your request.<br>
+          This helps us prevent bot abuse.
+        </div>
+
+        <div class="countdown-ring">
+          <svg width="100" height="100" viewBox="0 0 100 100">
+            <defs>
+              <linearGradient id="ring-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%"   stop-color="#fe2c55"/>
+                <stop offset="100%" stop-color="#25f4ee"/>
+              </linearGradient>
+            </defs>
+            <circle class="ring-bg"   cx="50" cy="50" r="44"/>
+            <circle id="ring-fill" class="ring-fill" cx="50" cy="50" r="44"/>
+          </svg>
+          <div class="countdown-num" id="countdown-num">15</div>
+        </div>
+
+        <div id="verify-tasks" class="verify-tasks"></div>
+      </div>
+    </div>
+
+    <!-- Step: Processing -->
+    <div id="step-processing" class="step">
+      <div class="processing-container">
+        <div class="proc-anim">
+          <div class="proc-ring"></div>
+          <div class="proc-ring"></div>
+          <div class="proc-ring"></div>
+          <div class="proc-icon">⚡</div>
+        </div>
+        <div class="proc-title">Processing Your Request</div>
+        <div class="proc-status" id="proc-status">Queuing...</div>
+
+        <div class="progress-wrap">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div class="proc-steps" id="proc-steps"></div>
+      </div>
+    </div>
+
+    <!-- Step: Success -->
+    <div id="step-success" class="step">
+      <div class="success-container">
+        <div class="success-anim">
+          <div class="success-circle">✅</div>
+          <div class="confetti-wrap" id="confetti-wrap"></div>
+        </div>
+
+        <div class="success-title">Successfully Sent!</div>
+        <div class="success-amount" id="success-amount">+1,000</div>
+        <div class="success-service" id="success-service">Views sent to your video</div>
+
+        <div class="cooldown-info">
+          <span class="cooldown-icon">⏳</span>
+          <div class="cooldown-text">
+            <strong>Cooldown Active</strong>
+            <span>This service is on cooldown for <strong id="cooldown-time">30 minutes</strong></span>
+          </div>
+        </div>
+
+        <button id="btn-done" class="btn-done">← Back to Services</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
